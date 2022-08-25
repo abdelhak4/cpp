@@ -18,10 +18,18 @@ void	Contact::ADD (
 	this->_phone_number = phoneNumber;
 	this->_darkest_secret = darkestSecret;
 }
-std::string 	Contact::getter(void)
+
+std::string 	Contact::getter(int index)
 {
-	return _first_name;
+	if (index == 0)
+		return _first_name;
+	else if (index == 1)
+		return _last_name;
+	else if (index == 2)
+		return _phone_number;
+	return _darkest_secret;
 }
+
 void	Contact::SEARCH() {
 
 }

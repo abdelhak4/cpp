@@ -17,7 +17,7 @@ public:
 
 	void	SEARCH(); // display a specific contact
 	void	EXIT(); //The program quits and the contacts are lost forever!
-	std::string getter();
+	std::string getter(int index);
 private:
 	std::string _first_name;
 	std::string _last_name;
