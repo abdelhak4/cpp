@@ -12,6 +12,7 @@
 
 #include "PhoneBook.hpp"
 #include <iomanip>
+#include <stdio.h>
 
 std::string	read_line(std::string str, std::string data)
 {
@@ -50,10 +51,17 @@ int main(void)
 	std::string phoneNumber;
 	std::string darkestSecret;
 	i = 0;
-	while (1) {
+	while (1)
+	{
 		std::cout << "Please note the commands are - add - search - exit" << std::endl;
 		std::cout << "Enter a command" << std::endl;
 		std::getline(std::cin, str);
+		if (i > 7)
+			i = 0;
+		if (std::cin.eof() == 1) {
+			std::clearerr(stdin);
+			std::cin.clear();
+		}
 		if (str == "add") {
 			firstName = read_line("Enter the first name", firstName);
 			// error handling here!!
@@ -63,7 +71,6 @@ int main(void)
 			phoneBook.contact[i].ADD(firstName, lastName, phoneNumber, darkestSecret);
 			i++;
 		}
-//			adding_contact();
 		else if (str == "search") {
 			search_for_contact(phoneBook, i);
 		} else if (str == "exit")
