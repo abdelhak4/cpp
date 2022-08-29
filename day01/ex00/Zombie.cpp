@@ -19,5 +19,4 @@ void	randomChump(std::string name)
 	zombie.setter(name);
 	std::cout << zombie.getter();
 	zombie.announce();
-
 }

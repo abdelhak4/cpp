@@ -5,7 +5,7 @@
 #include "Zombie_classe.hpp"
 
 void	Zombie::announce( void ) {
-	std::cout << ": BraiiiiiiinnnzzzZ..." <<  '\n';
+	std::cout << _name <<": BraiiiiiiinnnzzzZ..." <<  '\n';
 }
 
 Zombie::Zombie() { std::cout << "Constructot is called!\n"; }
