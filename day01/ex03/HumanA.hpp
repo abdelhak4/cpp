@@ -9,12 +9,13 @@
 
 class HumanA {
 private:
-	Weapon _Weapon;
+	Weapon &_Weapon;
 	std::string	_name;
 
 public:
 	void	attack( void );
-	HumanA(std::string );
+	HumanA( std::string name, Weapon& weapon);
+//	void	setWeapon(Weapon& Weapon);
 };
 
 #endif //CPP_HUMANA_HPP
