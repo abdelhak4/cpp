@@ -15,7 +15,7 @@ private:
 public:
 	void	attack( void );
 	HumanA( std::string name, Weapon& weapon);
-//	void	setWeapon(Weapon& Weapon);
+//	void	setWeapon(Weapon& Weapon); // for test
 };
 
 #endif //CPP_HUMANA_HPP
