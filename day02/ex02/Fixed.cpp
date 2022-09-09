@@ -90,7 +90,7 @@ bool &Fixed::operator!=(const Fixed &f) {
 
 /**** Math operators ***/
 
-float &Fixed::operator*( ) {
+float &Fixed::operator*(Fixed& a, Fixed& b) {
 
 }
 
@@ -99,11 +99,15 @@ float &Fixed::operator/( void ) {
 }
 
 float &Fixed::operator+( void ) {
-	return (fx_value + 0.00390625);
+	int	fixed = roundf((0.00390625 * (1 << fb)));
+	int result = fixed + fx_value;
+	return (static_cast<float >(result) / (1 << fb));
 }
 
 float &Fixed::operator-( void ) {
-	return (fx_value - 0.00390625);
+	int	fixed = roundf((0.00390625 * (1 << fb)));
+	int result = fixed - fx_value;
+	return (static_cast<float >(result) / (1 << fb));
 }
 
 float &Fixed::operator++( void ) {

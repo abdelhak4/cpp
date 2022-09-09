@@ -1,10 +1,11 @@
 //
-// Created by Abdelhak El moussaoui on 9/2/22.
+//// Created by Abdelhak El moussaoui on 9/2/22.
 //
 
 #ifndef CPP_FIXED_HPP
 #define CPP_FIXED_HPP
 #include <iostream>
+#include <math.h>
 
 class Fixed {
 public:

@@ -17,7 +17,7 @@ static int	Account::getTotalAmount( void )
 
 static int	Account::getNbDeposits( void )
 {
-	std::cout << _nbDeposits << '\n';
+	std::cout << _totalNbDeposits << '\n';
 }
 
 static int	Account::getNbWithdrawals( void )
