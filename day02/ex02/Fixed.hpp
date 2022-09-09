@@ -16,21 +16,21 @@ class Fixed {
 		Fixed (const Fixed& t);  //Copy
 		Fixed&	operator= (const Fixed& t); // copy assignment
 		//// logical operators
-		bool&	operator>(const Fixed& f);
-		bool&	operator<(const Fixed& f);
-		bool&	operator>=(const Fixed& f);
-		bool&	operator<=(const Fixed& f);
-		bool&	operator==(const Fixed& f);
-		bool&	operator!=(const Fixed& f);
+		Fixed	operator>(const Fixed f ) const;
+		Fixed	operator<(const Fixed f ) const;
+		Fixed	operator>=(const Fixed f) const;
+		Fixed	operator<=(const Fixed f) const;
+		Fixed	operator==(const Fixed f) const;
+		Fixed	operator!=(const Fixed f) const;
 		//// Math operators
-		float&	operator+( void );
-		float&	operator-( void );
-		float&	operator*( void );
-		float&	operator/( void );
-		float&	operator++( void );
-		float&	operator++( int );
-		float&	operator--( void );
-		float&	operator--( int );
+		Fixed	operator+( Fixed a );
+		Fixed	operator-( Fixed a );
+		float 	operator*( Fixed a );
+		Fixed	operator/( Fixed a );
+		Fixed	operator++( void );
+		Fixed	operator++( int );
+		Fixed	operator--( void );
+		Fixed	operator--( int );
 		/**********		getter and some other conversions		******/
 		int 	getRawBits( void ) const;
 		void	setRawBits( int const raw );

@@ -22,7 +22,7 @@ Fixed::Fixed(const int val)
 Fixed::Fixed(const float val)
 {
 	std::cout << "Float constructor called" << std::endl;
-	fx_value = roundf(val * (1<<fb));
+	fx_value = roundf(val * (static_cast<float>((1<<fb))));
 }
 
 Fixed::Fixed(const Fixed &t)
@@ -64,69 +64,82 @@ std::ostream &operator<<(std::ostream& os, const Fixed &obj)
 
 /// logical operators:
 
-bool &Fixed::operator>(const Fixed &f) {
+Fixed Fixed::operator>(const Fixed f) {
 	return (fx_value > f.fx_value);
 }
 
-bool &Fixed::operator<(const Fixed &f) {
+bool Fixed::operator<(const Fixed f) const {
 	return (fx_value < f.fx_value);
 }
 
-bool &Fixed::operator>=(const Fixed &f) {
+bool Fixed::operator>=(const Fixed f) {
 	return (fx_value >= f.fx_value);
 }
 
-bool &Fixed::operator<=(const Fixed &f) {
+bool Fixed::operator<=(const Fixed f) {
 	return (fx_value <= f.fx_value);
 }
 
-bool &Fixed::operator==(const Fixed &f) {
+bool Fixed::operator==(const Fixed f) {
 	return (fx_value == f.fx_value);
 }
 
-bool &Fixed::operator!=(const Fixed &f) {
+bool Fixed::operator!=(const Fixed f) {
 	return (fx_value != f.fx_value);
 }
 
 /**** Math operators ***/
 
-float &Fixed::operator*(Fixed& a, Fixed& b) {
-
+float Fixed::operator*(Fixed b) {
+	int f = (this->fx_value * b.fx_value) / (1 << fb);
+	return (f / (float)(1 << fb));
 }
 
-float &Fixed::operator/( void ) {
-
-}
-
-float &Fixed::operator+( void ) {
-	int	fixed = roundf((0.00390625 * (1 << fb)));
-	int result = fixed + fx_value;
-	return (static_cast<float >(result) / (1 << fb));
-}
-
-float &Fixed::operator-( void ) {
-	int	fixed = roundf((0.00390625 * (1 << fb)));
-	int result = fixed - fx_value;
-	return (static_cast<float >(result) / (1 << fb));
-}
-
-float &Fixed::operator++( void ) {
-
-}
-
-float &Fixed::operator--( void ) {
-
-}
-
-float &Fixed::operator++(int) {
-
-}
-
-float &Fixed::operator--(int) {
-
+Fixed Fixed::operator/( Fixed a) {
+	Fixed tmp;
+	tmp.fx_value = roundf(((this->fx_value * (1 << fb)) / a.fx_value));
+	a = tmp;
+	return a;
 }
 
 
+Fixed Fixed::operator+( Fixed a) {
+	Fixed tmp;
+	tmp.fx_value = this->fx_value + a.fx_value;
+	return tmp;
+}
+
+Fixed Fixed::operator-( Fixed a ) {
+	Fixed tmp;
+	tmp.fx_value = this->fx_value - a.fx_value;
+	return tmp;
+}
+
+// pre increment == exp ++a
+Fixed Fixed::operator++( void ) {
+	int	f = roundf((0.00390625 * (1 << fb)));
+	this->fx_value = this->fx_value + f;
+	return *this;
+}
+
+// post increment == exp a++
+Fixed Fixed::operator++(int) {
+	Fixed old = *this;
+	operator++();
+	return old;
+}
+
+Fixed Fixed::operator--( void ) {
+	int	f = roundf((0.00390625 * (1 << fb)));
+	this->fx_value = this->fx_value + f;
+	return *this;
+}
+
+Fixed Fixed::operator--(int) {
+	Fixed old = *this;
+	operator++();
+	return old;
+}
 
 
 
@@ -153,6 +166,4 @@ float &Fixed::operator--(int) {
 
 
 
-+.
-00
-+
+
