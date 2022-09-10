@@ -38,9 +38,7 @@ Fixed &Fixed::operator=(const Fixed &t)
 	return *this;
 }
 
-Fixed::~Fixed() {
-	std::cout << "Destructor called" << std::endl;
-}
+Fixed::~Fixed(void) { std::cout << "Destructor called" << std::endl; }
 
 //// public member functions
 
@@ -64,29 +62,17 @@ std::ostream &operator<<(std::ostream& os, const Fixed &obj)
 
 /// logical operators:
 
-Fixed Fixed::operator>(const Fixed f) {
-	return (fx_value > f.fx_value);
-}
+bool Fixed::operator>(const Fixed f) const { return (fx_value > f.fx_value); }
 
-bool Fixed::operator<(const Fixed f) const {
-	return (fx_value < f.fx_value);
-}
+bool Fixed::operator<(const Fixed f) const { return (fx_value < f.fx_value); }
 
-bool Fixed::operator>=(const Fixed f) {
-	return (fx_value >= f.fx_value);
-}
+bool Fixed::operator>=(const Fixed f) const { return (fx_value >= f.fx_value); }
 
-bool Fixed::operator<=(const Fixed f) {
-	return (fx_value <= f.fx_value);
-}
+bool Fixed::operator<=(const Fixed f) const { return (fx_value <= f.fx_value); }
 
-bool Fixed::operator==(const Fixed f) {
-	return (fx_value == f.fx_value);
-}
+bool Fixed::operator==(const Fixed f) const { return (fx_value == f.fx_value); }
 
-bool Fixed::operator!=(const Fixed f) {
-	return (fx_value != f.fx_value);
-}
+bool Fixed::operator!=(const Fixed f) const { return (fx_value != f.fx_value); }
 
 /**** Math operators ***/
 
@@ -101,7 +87,6 @@ Fixed Fixed::operator/( Fixed a) {
 	a = tmp;
 	return a;
 }
-
 
 Fixed Fixed::operator+( Fixed a) {
 	Fixed tmp;
@@ -141,11 +126,23 @@ Fixed Fixed::operator--(int) {
 	return old;
 }
 
+Fixed &Fixed::min(Fixed &f1, Fixed &f2) {
+	if (f1.fx_value < f2.fx_value)
+		return (f1);
+	return f2;
+}
 
+const Fixed &Fixed::min(const Fixed &f1, const Fixed &f2) {
+	return ( (f1.fx_value < f2.fx_value) ? f1 : f2 );
+}
 
+Fixed &Fixed::max(Fixed &f1, Fixed &f2) {
+	return ( (f1.fx_value > f2.fx_value) ? f1 : f2 );
+}
 
-
-
+const Fixed &Fixed::max(const Fixed &f1, const Fixed &f2) {
+	return ( (f1.fx_value > f2.fx_value) ? f1 : f2 );
+}
 
 
 

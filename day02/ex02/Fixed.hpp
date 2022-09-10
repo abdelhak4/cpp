@@ -16,12 +16,12 @@ class Fixed {
 		Fixed (const Fixed& t);  //Copy
 		Fixed&	operator= (const Fixed& t); // copy assignment
 		//// logical operators
-		Fixed	operator>(const Fixed f ) const;
-		Fixed	operator<(const Fixed f ) const;
-		Fixed	operator>=(const Fixed f) const;
-		Fixed	operator<=(const Fixed f) const;
-		Fixed	operator==(const Fixed f) const;
-		Fixed	operator!=(const Fixed f) const;
+		bool	operator>(const Fixed f ) const;
+		bool	operator<(const Fixed f ) const;
+		bool	operator>=(const Fixed f) const;
+		bool	operator<=(const Fixed f) const;
+		bool	operator==(const Fixed f) const;
+		bool	operator!=(const Fixed f) const;
 		//// Math operators
 		Fixed	operator+( Fixed a );
 		Fixed	operator-( Fixed a );
@@ -36,10 +36,10 @@ class Fixed {
 		void	setRawBits( int const raw );
 		float	toFloat( void ) const;
 		int 	toInt( void ) const;
-		static	int& min(Fixed& f1, Fixed& f2);
-		static	int& min(const Fixed& f1, const Fixed& f2) ;
-		static	int& max(const Fixed& f1, const Fixed& f2);
-		static	int& max(Fixed& f1, Fixed& f2);
+		static	Fixed& min(Fixed& f1, Fixed& f2);
+		const static	Fixed& min(const Fixed& f1, const Fixed& f2) ;
+		const static	Fixed& max(const Fixed& f1, const Fixed& f2);
+		static	Fixed& max(Fixed& f1, Fixed& f2);
 
 
 	private:
