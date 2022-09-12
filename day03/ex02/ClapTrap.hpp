@@ -17,7 +17,7 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 	ClapTrap( void );
-	ClapTrap(std::string name);
+	ClapTrap(const std::string& name);
 	ClapTrap(const ClapTrap& copy);
 	ClapTrap& operator=(const ClapTrap& object);
 	~ClapTrap();

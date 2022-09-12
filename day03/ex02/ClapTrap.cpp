@@ -7,14 +7,14 @@
 
 /// ** Constructors **
 
-ClapTrap::ClapTrap(void) {
+ClapTrap::ClapTrap() {
 	std::cout << "Default constructor called" << std::endl;
 	HitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
 }
 
-ClapTrap::ClapTrap(std::string name) {
+ClapTrap::ClapTrap(const std::string& name) {
 	std::cout << "name constructor called" << std::endl;
 	if (name.empty())
 	{
