@@ -5,7 +5,7 @@
 
 int main(void)
 {
-	ScavTrap scavTrap;
+	ScavTrap scavTrap("dfa");
 //	ClapTrap clapTrap(scavTrap);
 	std::cout << "---------------------\n";
 	ScavTrap s(scavTrap);
