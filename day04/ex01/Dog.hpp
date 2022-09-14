@@ -17,6 +17,8 @@ public:
     Dog& operator=(const Dog& to);
     ~Dog();
     Dog(const std::string &type);
+	Brain *getBrain() const;
+	void setBrain(Brain *brain);
 };
 
 

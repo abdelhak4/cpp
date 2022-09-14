@@ -13,11 +13,11 @@ class Animal {
 protected:
     std::string type;
 public:
-     void    MakeSound() const;
+	virtual void    MakeSound() const;
     Animal();
     Animal(Animal& copy);
     Animal& operator=(const Animal& to);
-     ~Animal();
+	virtual ~Animal();
     Animal(const std::string &type);
     const std::string &getType() const;
 };

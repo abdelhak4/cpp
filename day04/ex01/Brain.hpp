@@ -14,7 +14,8 @@ public:
     Brain(Brain& copy);
     Brain& operator=(const Brain& type);
     ~Brain();
-//    Brain(const std::string &type);
+	const std::string *getIdeas() const;
+	void setter(const std::string& idea);
 };
 
 

@@ -3,6 +3,6 @@ project(.)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
+include_directories(../../day04/ex01)
 
-add_executable(main.cpp Animal.cpp Animal.hpp Dog.cpp Dog.hpp Cat.cpp Cat.hpp WrongAnimal.cpp WrongAnimal.hpp WrongCat.cpp WrongCat.hpp)
+add_executable(animal main.cpp Brain.cpp Brain.hpp Cat.cpp Dog.cpp Animal.cpp)

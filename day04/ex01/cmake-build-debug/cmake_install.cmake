@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ael-mous/CLionProjects/cpp/day04/ex00
+# Install script for directory: /Users/ael-mous/CLionProjects/cpp/day04/ex01
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ael-mous/CLionProjects/cpp/day04/ex00/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/ael-mous/CLionProjects/cpp/day04/ex01/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

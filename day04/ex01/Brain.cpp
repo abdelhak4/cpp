@@ -5,11 +5,6 @@
 #include <iostream>
 #include "Brain.hpp"
 
-
-//Brain::Brain(const std::string& type)  {
-//    std::cout << "Brain Class name constructor called" << std::endl;
-//}
-
 Brain::~Brain() {
     std::cout << "Brain Class destructor called" << std::endl;
 }
@@ -29,4 +24,14 @@ Brain &Brain::operator=(const Brain &to) {
         ideas[i] = to.ideas[i];
     }
     return *this;
+}
+
+const std::string *Brain::getIdeas() const {
+	return ideas;
+}
+
+void Brain::setter(const std::string& idea) {
+	for (int i = 0; i < 100; ++i) {
+		ideas[i] = idea;
+	}
 }

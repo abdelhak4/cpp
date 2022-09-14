@@ -6,7 +6,7 @@ CFLAGS = -Wall -Werror -Wextra
 all : $(NAME)
 
 $(NAME) : $(SRCS)
-	c++ $(CFLAGS) $(SRCS) -o $(NAME)
+	c++ -g $(CFLAGS) $(SRCS) -o $(NAME)
 clean : fclean
 
 fclean :

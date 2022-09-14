@@ -19,6 +19,7 @@ Cat::~Cat() {
     delete brain;
 }
 
+// default
 Cat::Cat()
 {
 	brain = new Brain();

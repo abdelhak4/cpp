@@ -9,26 +9,32 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+
+void	test()
+{
+	Animal *animal[2];
+	animal[0] = new Dog();
+	animal[1] = new Cat();
+	Brain *brain = new Brain();
+	Dog *dog = new Dog();
+	Cat *cat = new Cat();
+
+	brain->setter("test");
+	const std::string *p = brain->getIdeas();
+	for (int i = 0; i < 100; ++i) {
+		std::cout << p[i] << std::endl;
+	}
+	dog->setBrain(brain);
+	brain->setter("ok");
+
+	delete animal[0];
+	delete animal[1];
+	delete brain;
+
+}
 int main()
 {
-//    const WrongAnimal* wrongAnimal = new WrongAnimal();
-//    const WrongAnimal* w = new WrongCat();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-
-    delete j;//should not create a leak
-    delete i;
-    while(1);
-//    const Animal* meta = new Animal();
-//    const Animal* j = new Dog();
-//    const Animal* i = new Cat();
-//    std::cout << j->getType() << " " << std::endl;
-//    std::cout << i->getType() << " " << std::endl;
-//    i->MakeSound(); //will output the cat sound!
-//    j->MakeSound();
-//    meta->MakeSound();
-//    delete meta;
-//    delete j;
-//    delete i;
+	test();
+	system("leaks animal");
     return 0;
 }

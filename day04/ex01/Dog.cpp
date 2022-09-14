@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include "Dog.hpp"
-
+#include "Brain.hpp"
 void Dog::MakeSound() const {
     std::cout << "bow wow\n";
 }
@@ -15,9 +15,9 @@ Dog::Dog(const std::string& type) {
     std::cout << "Dog Class name constructor called" << std::endl;
 }
 
-Dog::~Dog() {
-    delete brain;
+Dog::~Dog()  {
     std::cout << "Dog Class destructor called" << std::endl;
+	delete brain;
 }
 
 Dog::Dog()
@@ -34,5 +34,15 @@ Dog::Dog(Dog &copy) {
 
 Dog &Dog::operator=(const Dog &to) {
     this->type = to.type;
+	// todo here should allocate for brain to reach deep copy
+	this->brain = to.brain;
     return *this;
+}
+
+Brain *Dog::getBrain() const {
+	return brain;
+}
+
+void Dog::setBrain(Brain *b) {
+	Dog::brain = b;
 }
