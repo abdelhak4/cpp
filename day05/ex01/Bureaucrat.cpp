@@ -3,8 +3,6 @@
 //
 
 #include "Bureaucrat.hpp"
-#include "../ex01/Bureaucrat.hpp"
-
 
 Bureaucrat::Bureaucrat() {
 	std::cout << "Default constructor called \n";
@@ -70,3 +68,6 @@ std::ostream&	operator<<(std::ostream& os, const Bureaucrat& o) {
 		return os;
 }
 
+void Bureaucrat::signFrom() {
+
+}
