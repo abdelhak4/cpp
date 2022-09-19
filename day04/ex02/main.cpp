@@ -16,6 +16,7 @@ void	test()
 //	animal[0] = new Dog();
 //	animal[1] = new Cat();
 //	Cat *cat = new Cat();
+
 	Cat simple;
 	std::cout <<    "---------------\n";
 	{

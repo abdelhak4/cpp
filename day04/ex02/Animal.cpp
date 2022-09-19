@@ -5,10 +5,6 @@
 #include <iostream>
 #include "Animal.hpp"
 
-void Animal::MakeSound() const {
-    std::cout << "You can't understand Animal's sound\n";
-}
-
 Animal::Animal(const std::string& type) {
     std::cout << "Base Class name constructor called" << std::endl;
     this->type = type;

@@ -2,39 +2,38 @@
 // Created by Abdelhak El moussaoui on 9/13/22.
 //
 
+#include "WrongAnimal.hpp"
 #include <iostream>
-#include "Animal.hpp"
 
-void Animal::MakeSound() const {
-    std::cout << "You can't understand Animal's sound\n";
+void WrongAnimal::MakeSound() const {
+    std::cout << "You can't understand WrongAnimal's sound\n";
 }
 
-Animal::Animal(const std::string& type) {
+WrongAnimal::WrongAnimal(const std::string& type) {
     std::cout << "Base Class name constructor called" << std::endl;
     this->type = type;
 }
 
-Animal::~Animal() {
+WrongAnimal::~WrongAnimal() {
     std::cout << "Base Class destructor called" << std::endl;
 }
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
     std::cout << "Base class default constructor called\n";
     type = "";
 }
 
-Animal::Animal(Animal &copy) {
+WrongAnimal::WrongAnimal(WrongAnimal &copy) {
     std::cout << "Base class copy constructor called\n";
     *this = copy;
 }
 
-Animal &Animal::operator=(const Animal &to) {
-	std::cout << "Animal operator constructor called\n";
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &to) {
     this->type = to.type;
     return *this;
 }
 
-const std::string &Animal::getType() const {
+const std::string &WrongAnimal::getType() const {
     return type;
 }

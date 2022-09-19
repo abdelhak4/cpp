@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CLionExternalBuildManager">
-    <target id="a3ab4917-c30a-4acb-b741-6b1c72387f98" name="re" defaultType="TOOL">
-      <configuration id="03acd288-93fc-4f70-8113-1476250549b7" name="re" />
+    <target id="dc650ee6-53a9-4c3b-8f5a-e6b256f79d7e" name="all" defaultType="TOOL">
+      <configuration id="afab5f66-033c-40f4-bd3d-a794e10d3d1a" name="all" />
     </target>
   </component>
 </project>
