@@ -60,6 +60,27 @@ build CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex01/
   OBJECT_DIR = CMakeFiles/Bureaucrat.cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex01
 
+build CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/ShrubberyCreationForm.cpp.o: CXX_COMPILER__Bureaucrat.2ecpp_Debug /Users/ael-mous/CLionProjects/cpp/day05/ex02/ShrubberyCreationForm.cpp || cmake_object_order_depends_target_Bureaucrat.cpp
+  DEP_FILE = CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/ShrubberyCreationForm.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu++14
+  INCLUDES = -I/Users/ael-mous/CLionProjects/cpp/day05/ex00/.
+  OBJECT_DIR = CMakeFiles/Bureaucrat.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02
+
+build CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/RobotomyRequestForm.cpp.o: CXX_COMPILER__Bureaucrat.2ecpp_Debug /Users/ael-mous/CLionProjects/cpp/day05/ex02/RobotomyRequestForm.cpp || cmake_object_order_depends_target_Bureaucrat.cpp
+  DEP_FILE = CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/RobotomyRequestForm.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu++14
+  INCLUDES = -I/Users/ael-mous/CLionProjects/cpp/day05/ex00/.
+  OBJECT_DIR = CMakeFiles/Bureaucrat.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02
+
+build CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/PresidentialPardonForm.cpp.o: CXX_COMPILER__Bureaucrat.2ecpp_Debug /Users/ael-mous/CLionProjects/cpp/day05/ex02/PresidentialPardonForm.cpp || cmake_object_order_depends_target_Bureaucrat.cpp
+  DEP_FILE = CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/PresidentialPardonForm.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu++14
+  INCLUDES = -I/Users/ael-mous/CLionProjects/cpp/day05/ex00/.
+  OBJECT_DIR = CMakeFiles/Bureaucrat.cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Bureaucrat.cpp
@@ -68,7 +89,7 @@ build CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex01/
 #############################################
 # Link the executable Bureaucrat.cpp
 
-build Bureaucrat.cpp: CXX_EXECUTABLE_LINKER__Bureaucrat.2ecpp_Debug CMakeFiles/Bureaucrat.cpp.dir/main.cpp.o CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex01/Form.cpp.o
+build Bureaucrat.cpp: CXX_EXECUTABLE_LINKER__Bureaucrat.2ecpp_Debug CMakeFiles/Bureaucrat.cpp.dir/main.cpp.o CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex01/Form.cpp.o CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/ShrubberyCreationForm.cpp.o CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/RobotomyRequestForm.cpp.o CMakeFiles/Bureaucrat.cpp.dir/Users/ael-mous/CLionProjects/cpp/day05/ex02/PresidentialPardonForm.cpp.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14
   OBJECT_DIR = CMakeFiles/Bureaucrat.cpp.dir
   POST_BUILD = :

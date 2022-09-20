@@ -29,13 +29,13 @@ public:
 	Form();
 	Form(const Form& copy);
 	Form& operator=(const Form& copy);
-	~Form();
+	virtual ~Form();
 	///getters
 	const 	std::string &getName() const;
-	bool 	isIsSigned() const;
+	virtual bool 	isIsSigned() const = 0;
 	short 	getGradeToSign() const;
 	short 	getGradeToExecute() const;
-	void	beSigned(Bureaucrat& bureaucrat);
+	virtual void	beSigned(Bureaucrat& bureaucrat) = 0;
 };
 
 
