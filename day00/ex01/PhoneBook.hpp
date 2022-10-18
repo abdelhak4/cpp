@@ -8,8 +8,11 @@
 #include <istream>
 
 class PhoneBook {
-public:
+private:
 	Contact	contact[8];
+public:
+	Contact getContact(int i);
+	void setContact(int i, std::string& toSet, std::string& str);
 };
 
 
