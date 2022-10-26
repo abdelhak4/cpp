@@ -1,12 +1,24 @@
 //
 // Created by Abdelhak El moussaoui on 8/28/22.
-//
 
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
-#include "Zombie_classe.hpp"
+#include <iostream>
+#include <iostream>
 
-void	randomChump(std::string name);
-Zombie	*newZombie(std::string name);
+class Zombie {
+public:
+		Zombie();
+		~Zombie();
+		void	announce( void );
+		std::string	getter( void );
+		void	setter(std::string name);
 
-#endif //CPP_ZOMBIE_HPP
+private:
+		std::string	_name;
+};
+//
+//void	randomChump(std::string name);
+//Zombie	*newZombie(std::string name);
+
+#endif //ZOMBIE_HPP
