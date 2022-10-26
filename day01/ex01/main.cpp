@@ -2,35 +2,56 @@
 // Created by Abdelhak El moussaoui on 8/28/22.
 //
 
-#include "Zombie_classe.hpp"
 #include "Zombie.hpp"
+
+
+Zombie *newZombie(std::string name)
+{
+	Zombie	*newZombie = new Zombie;
+
+	newZombie->setter(name);
+	return newZombie;
+}
+
+void	randomChump(std::string name)
+{
+	Zombie zombie;
+
+	zombie.setter(name);
+	zombie.announce();
+}
 
 Zombie	*zombieHorde(int N, std::string name )
 {
 	Zombie	*Horde;
-	Zombie	*firs;
 
-	firs = nullptr;
-	for (int i = 0; i < N; i++) {
-		if (i == 0)
-			firs = newZombie(name);
-		else
-		{
-			Horde = newZombie(name);
-			Horde->announce();
-			delete Horde;
-		}
+	if (N <= 0)
+		return 0;
+	Horde = new Zombie[N];
+	for (int i = 0; i < N; ++i) {
+		Horde[i].setter(name);
 	}
-	return firs;
+	return Horde;
+}
+
+void	ft_unit_test()
+{
+	Zombie	*zombie;
+	int		n;
+
+	n = 1;
+	zombie = zombieHorde(3, "unit");
+	if (!zombie)
+		return ;
+	std::cout << "-------\n";
+	for (int i = 0; i < n; ++i) {
+		zombie[i].announce();
+	}
+	delete[] zombie;
 }
 int main( void )
 {
-	Zombie	*zombie;
-
-	zombie = zombieHorde(0, "abde");
-	if (zombie != nullptr)
-		zombie->announce();
-	else
-		std::cout << "enter N > 0" << std::endl;
+	ft_unit_test();
+//	system("leaks zombie");
 	return (0);
 }

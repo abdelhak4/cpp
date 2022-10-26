@@ -4,19 +4,17 @@
 
 #include "Zombie.hpp"
 
-Zombie *newZombie(std::string name)
-{
-	Zombie	*newZombie = new Zombie;
-
-	newZombie->setter(name);
-	return newZombie;
+void	Zombie::announce( void ) {
+	std::cout <<  _name << ": BraiiiiiiinnnzzzZ..." <<  std::endl;
 }
 
-void	randomChump(std::string name)
-{
-	Zombie zombie;
-
-	zombie.setter(name);
-	zombie.announce();
-
+Zombie::Zombie() {
+	_name = "Foo";
+	std::cout << "Constructor is called!\n";
 }
+
+Zombie::~Zombie() { std::cout << _name <<": Destructors is called!\n"; }
+
+std::string Zombie::getter() { return (_name); }
+
+void	Zombie::setter(std::string name) { _name = name; }
