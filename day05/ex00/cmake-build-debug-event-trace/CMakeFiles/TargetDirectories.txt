@@ -1,3 +1,0 @@
-/Users/ael-mous/CLionProjects/cpp/day05/ex00/cmake-build-debug-event-trace/CMakeFiles/Bureaucrat.cpp.dir
-/Users/ael-mous/CLionProjects/cpp/day05/ex00/cmake-build-debug-event-trace/CMakeFiles/edit_cache.dir
-/Users/ael-mous/CLionProjects/cpp/day05/ex00/cmake-build-debug-event-trace/CMakeFiles/rebuild_cache.dir

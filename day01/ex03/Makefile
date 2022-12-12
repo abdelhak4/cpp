@@ -1,6 +1,6 @@
-FILES = main.cpp
+FILES = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
-NAME = sed
+NAME = exec
 
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 

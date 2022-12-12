@@ -1,6 +1,6 @@
-FILES = main.cpp
+FILES = main.cpp Harl.cpp
 
-NAME = sed
+NAME = harl
 
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 

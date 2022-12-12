@@ -7,7 +7,7 @@
 
 void	Harl::debug() {
 	std::cout << "[DEBUG]\n";
-	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!";
+	std::cout << "I love having extra bacon !";
 	std::cout << std::endl;
 }
 
@@ -28,8 +28,8 @@ void	Harl::warning() {
 	std::cout << std::endl;
 }
 
-void	Harl::complain(std::string level) {
-	int	i = 0;
+void	Harl::harlFilter(std::string level) {
+    size_t 	i = 0;
 	std::string levels[4] = {
 			"DEBUG", "INFO",
 			"WARNING", "ERROR"
@@ -40,7 +40,8 @@ void	Harl::complain(std::string level) {
 			break;
 		i++;
 	}
-	switch (i) {
+	switch (i)
+    {
 		case 0:
 			this->debug();
 		case 1:

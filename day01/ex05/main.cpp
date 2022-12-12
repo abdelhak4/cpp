@@ -3,8 +3,9 @@
 
 int main( void )
 {
-	Harl harl;
+	 Harl harl;
 
-	harl.complain("ERROR");
+   harl.get() = 12;
+	harl.complain("INFO");
 	return (0);
 }

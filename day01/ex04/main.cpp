@@ -2,8 +2,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <stdio.h>
-
 
 void	ft_replace(std::string file, std::string from, std::string to)
 {
@@ -11,9 +9,14 @@ void	ft_replace(std::string file, std::string from, std::string to)
 	std::ifstream inf;
 
 	inf.open(file);
+	if (!inf.is_open())
+	{
+		std::cout << "file not exist\n";
+		return ;
+	}
 	file += ".replace";
 	ouf.open(file);
-	if (!inf || !ouf)
+	if (!ouf)
 	{
 		std::cerr << "Could not be opened the file " << std::endl;
 		return ;
@@ -21,9 +24,12 @@ void	ft_replace(std::string file, std::string from, std::string to)
 	std::string str;
 	while (getline(inf, str))
 	{
+        std::cout << str << std::endl;
 		while (true)
 		{
 			size_t	pos = str.find(from);
+            std::cout << "pos :" << pos << std::endl;
+            std::cout << "npos :" << std::string::npos << std::endl;
 			if (pos != std::string::npos)
 			{
 				str.erase(pos, from.length());
@@ -36,7 +42,6 @@ void	ft_replace(std::string file, std::string from, std::string to)
 		if (!inf.eof())
 			ouf << '\n';
 	}
-	ouf << '\n';
 	inf.close();
 }
 

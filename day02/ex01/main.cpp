@@ -1,7 +1,6 @@
 //
 // Created by Abdelhak El moussaoui on 9/3/22.
 //
-#include <iostream>
 #include "Fixed.hpp"
 int main( void ) {
 	Fixed a;

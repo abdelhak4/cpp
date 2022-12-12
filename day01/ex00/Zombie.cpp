@@ -9,7 +9,7 @@ void	Zombie::announce( void ) {
 }
 
 Zombie::Zombie() {
-	_name = "Foo";
+	_name = "{ Default Name }";
 	std::cout << "Constructor is called!\n";
 }
 

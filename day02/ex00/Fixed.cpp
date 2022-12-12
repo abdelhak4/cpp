@@ -35,6 +35,5 @@ int Fixed::getRawBits() const {
 //}
 
 void Fixed::setRawBits(const int raw) {
-//	fx_value = raw * (double)(1 << fb);
 	fx_value = raw;
 }

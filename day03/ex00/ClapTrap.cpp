@@ -35,6 +35,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &object) {
 	return object;
 }
 
+
 /// ** member functions **
 void ClapTrap::attack(const std::string &target) {
 	if (HitPoints && energyPoints)
@@ -58,4 +59,3 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	HitPoints += amount;
 	energyPoints--;
 }
-

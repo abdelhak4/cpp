@@ -22,10 +22,6 @@ Fixed::Fixed(const int val)
 Fixed::Fixed(const float val)
 {
 	std::cout << "Float constructor called" << std::endl;
-//	std::cout << "tests ----- \n";
-//	const float va  = roundf(42.42f);
-//  	int vaa = ((va) * (1 << fb));
-//	std::cout << ((float )vaa / (1 << fb)) << '\n';
 	fx_value = roundf(val * (1<<fb));
 }
 

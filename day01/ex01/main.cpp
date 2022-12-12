@@ -26,7 +26,7 @@ Zombie	*zombieHorde(int N, std::string name )
 	Zombie	*Horde;
 
 	if (N <= 0)
-		return 0;
+		return NULL;
 	Horde = new Zombie[N];
 	for (int i = 0; i < N; ++i) {
 		Horde[i].setter(name);
@@ -39,15 +39,15 @@ void	ft_unit_test()
 	Zombie	*zombie;
 	int		n;
 
-	n = 1;
-	zombie = zombieHorde(3, "unit");
-	if (!zombie)
+	n = 2;
+	zombie = zombieHorde(n, "unit");
+	if (zombie == NULL)
 		return ;
 	std::cout << "-------\n";
 	for (int i = 0; i < n; ++i) {
 		zombie[i].announce();
 	}
-	delete[] zombie;
+	delete [] zombie;
 }
 int main( void )
 {

@@ -1,6 +1,6 @@
-FILES = main.cpp
+FILES = main.cpp Zombie.cpp
 
-NAME = sed
+NAME = zombie
 
 CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
