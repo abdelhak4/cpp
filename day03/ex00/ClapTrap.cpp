@@ -9,15 +9,14 @@
 
 ClapTrap::ClapTrap(void) {
 	std::cout << "Default constructor called" << std::endl;
+	name = "default";
+	HitPoints = 10; // represent health of the ClapTrap
+	energyPoints = 10;
+	attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name) {
 	std::cout << "name constructor called" << std::endl;
-	if (name.empty())
-	{
-		std::cout << "please enter a string" << std::endl;
-		return ;
-	}
 	this->name = name;
 }
 
@@ -32,7 +31,11 @@ ClapTrap::~ClapTrap() {
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &object) {
 	std::cout << "Copy assignment operator constructor called" << std::endl;
-	return object;
+	name = object.name;
+	energyPoints = object.energyPoints;
+	attackDamage = object.attackDamage;
+	HitPoints = object.HitPoints;
+	return *this;
 }
 
 
@@ -42,19 +45,30 @@ void ClapTrap::attack(const std::string &target) {
 	{
 		energyPoints--;
 		std::cout << "ClapTrap " << name << " attacks " << target;
-		std::cout << ", causing " <<  attackDamage << "points of damage!";
+		std::cout << ", causing " <<  attackDamage << " points of damage!";
 		std::cout << std::endl;
 	}
+	else
+		std::cout << "ClapTrap has No Energy Point or Hit Point" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-	attackDamage += amount;
-	std::cout << "ClapTrap " << name << " attacks " << target;
-	std::cout << ", causing " <<  attackDamage << "points of damage!";
-	std::cout << std::endl;
+	if (HitPoints && energyPoints)
+	{
+		std::cout << "ClapTrap has taken a damage" << std::endl;
+		attackDamage += amount;
+	}
+	else
+		std::cout << "ClapTrap has No Energy Point or Hit Point" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-	HitPoints += amount;
-	energyPoints--;
+	if (HitPoints && energyPoints)
+	{
+		std::cout << "ClapTrap Repaired it self by amount of " << amount << std::endl;
+		HitPoints += amount;
+		energyPoints--;
+	}
+	else
+		std::cout << "ClapTrap has No Energy Point or Hit Point" << std::endl;
 }

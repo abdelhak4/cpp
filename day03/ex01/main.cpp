@@ -1,16 +1,11 @@
-
-
-#include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-int main(void)
+
+int main ()
 {
-	ScavTrap scavTrap;
-//	ClapTrap clapTrap(scavTrap);
-	std::cout << "---------------------\n";
-	ScavTrap s(scavTrap);
-	s.attack("name");
-	s.guardGate();
-	s.beRepaired(12);
-	s.takeDamage(12);
+	ClapTrap clapTrap;
+
+	clapTrap.attack("me");
+	clapTrap.beRepaired(1);
+	clapTrap.takeDamage(3);
 }

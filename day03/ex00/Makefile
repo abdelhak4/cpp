@@ -1,4 +1,4 @@
-FILES = main.cpp ClapTrap.cpp ScavTrap.cpp
+FILES = main.cpp ClapTrap.cpp
 
 NAME = exec
 
