@@ -1,16 +1,17 @@
-NAME = FIXED
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+FILES = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
-CFLAGS = -Wall -Werror -Wextra
+NAME = exec
+
+CFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 all : $(NAME)
 
-$(NAME) : $(SRCS)
-	c++ $(CFLAGS) $(SRCS) -o $(NAME)
-clean : fclean
+$(NAME) : $(FILES)
+	c++ $(CFLAGS) $(FILES) -o $(NAME)
 
-fclean :
-	rm -f $(NAME)
+clean :
+	@rm -rf $(NAME)
+
+fclean : clean
 
 re : fclean all
-.PHONY: clean all clean re fclean

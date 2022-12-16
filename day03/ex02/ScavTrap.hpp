@@ -5,16 +5,16 @@
 #ifndef CPP_SCAVTRAP_HPP
 #define CPP_SCAVTRAP_HPP
 #include "ClapTrap.hpp"
-//    | Derived class;   | Base class
-class ScavTrap: public ClapTrap{
 
+class ScavTrap: public ClapTrap {
 public:
-    static void    guardGate();
+	void	guardGate(void);
 	ScavTrap( void );
-	ScavTrap(const std::string& name);
-	ScavTrap(const ScavTrap& copy);
-	ScavTrap& operator=(const ScavTrap& object);
+	ScavTrap(std::string name);
+	ScavTrap(const ClapTrap& copy);
 	~ScavTrap();
+	void attack(const std::string &target);
+	ScavTrap& operator=(const ScavTrap& object);
 
 };
 

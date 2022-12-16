@@ -2,20 +2,20 @@
 /// Created by Abdelhak El moussaoui on 9/10/22.
 //
 
-#ifndef CPP_SCAVTRAP_HPP
-#define CPP_SCAVTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 #include "ClapTrap.hpp"
-//    | Derived class;   | Base class
+
 class FragTrap: public ClapTrap{
 
 public:
 	FragTrap( void );
 	FragTrap(const std::string& name);
-	FragTrap(const ClapTrap& copy);
+	FragTrap(const FragTrap& copy);
 	FragTrap& operator=(const FragTrap& object);
 	~FragTrap();
-
+	void	highFivesGuys();
 };
 
 
-#endif //CPP_SCAVTRAP_HPP
+#endif //SCAVTRAP_HPP

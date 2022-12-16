@@ -5,7 +5,7 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
-	std::cout << "FragTrap Name constructor called" << std::endl;
+	std::cout << "FragTrap Named constructor called" << std::endl;
 }
 
 FragTrap::FragTrap() {
@@ -15,9 +15,12 @@ FragTrap::FragTrap() {
 	attackDamage = 30;
 }
 
-FragTrap::FragTrap(const ClapTrap &copy) : ClapTrap(copy) {
+FragTrap::FragTrap(const FragTrap &copy) {
 	std::cout << "FragTrap copy constructor called" << std::endl;
-	*this = copy;
+	this->name = copy.name;
+	this->HitPoints =  copy.HitPoints;
+	this->energyPoints = copy.energyPoints;
+	this->attackDamage = copy.attackDamage;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &object) {
@@ -31,4 +34,8 @@ FragTrap &FragTrap::operator=(const FragTrap &object) {
 
 FragTrap::~FragTrap() {
 	std::cout << "FragTrap Destructor constructor called" << std::endl;
+}
+
+void FragTrap::highFivesGuys() {
+	std::cout << "high fives " << std::endl;
 }
