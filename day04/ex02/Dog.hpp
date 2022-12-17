@@ -2,8 +2,8 @@
 // Created by Abdelhak El moussaoui on 9/13/22.
 //
 
-#ifndef _DOG_HPP
-#define _DOG_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
 #include "Animal.hpp"
 #include "Brain.hpp"
 
@@ -22,4 +22,4 @@ public:
 };
 
 
-#endif //_DOG_HPP
+#endif

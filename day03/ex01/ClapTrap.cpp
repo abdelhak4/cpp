@@ -16,8 +16,11 @@ ClapTrap::ClapTrap(void) {
 }
 
 ClapTrap::ClapTrap(std::string name) {
-	std::cout << "name constructor called" << std::endl;
+	std::cout << "named constructor called" << std::endl;
 	this->name = name;
+	HitPoints = 10; // represent health of the ClapTrap
+	energyPoints = 10;
+	attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy) {

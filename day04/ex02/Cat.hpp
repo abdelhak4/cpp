@@ -2,8 +2,8 @@
 // Created by Abdelhak El moussaoui on 9/13/22.
 //
 
-#ifndef _CAT_HPP
-#define _CAT_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 #include "Animal.hpp"
 #include "Brain.hpp"
 
@@ -23,4 +23,4 @@ public:
 };
 
 
-#endif //_CAT_HPP
+#endif

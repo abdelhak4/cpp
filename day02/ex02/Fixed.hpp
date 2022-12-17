@@ -2,6 +2,9 @@
 //// Created by Abdelhak El moussaoui on 9/2/22.
 //
 
+int x = 9;
+int u = x;
+
 #ifndef CPP_FIXED_HPP
 #define CPP_FIXED_HPP
 #include <iostream>

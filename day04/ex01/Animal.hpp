@@ -1,9 +1,7 @@
-//
-// Created by Abdelhak El moussaoui on 9/13/22.
-//
 
-#ifndef CPP_ANIMAL_HPP
-#define CPP_ANIMAL_HPP
+
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 #include <string>
 
 
@@ -23,4 +21,4 @@ public:
 };
 
 
-#endif //CPP_ANIMAL_HPP
+#endif

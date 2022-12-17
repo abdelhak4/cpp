@@ -11,12 +11,14 @@ void Cat::MakeSound() const {
 
 Cat::Cat(const std::string& type) {
     this->type = type;
-    std::cout << "Cat Class name constructor called" << std::endl;
+	brain = new Brain();
+    std::cout << "Cat parametrized Class constructor called" << std::endl;
 }
 
 Cat::~Cat() {
-	delete brain;
 	std::cout << "Cat Class destructor called" << std::endl;
+
+	delete brain;
 }
 
 // default
@@ -29,13 +31,18 @@ Cat::Cat()
 
 Cat::Cat(Cat &copy) {
     std::cout << "Cat class copy constructor called\n";
-    *this = copy;
+	this->type = copy.type;
+	brain = new Brain();
+
+	*(this->brain) = *(copy.brain);
 }
 
 Cat &Cat::operator=(const Cat &to) {
 	std::cout << "Cat operator constructor called\n";
+//	delete brain;
+//
+//	brain = new Brain();
     this->type = to.type;
-	this->brain = new Brain();
 	*(this->brain) = *(to.brain);
     return *this;
 }
@@ -47,6 +54,10 @@ void Cat::getBrain() const {
 	}
 }
 
-void Cat::setBrain(Brain *brain) {
-	Cat::brain = brain;
+void Cat::setBrain(Brain *newBrain) {
+	if (newBrain == nullptr)
+		return ;
+//	delete brain;
+//	this->brain = new Brain;
+	*Cat::brain = *newBrain;
 }

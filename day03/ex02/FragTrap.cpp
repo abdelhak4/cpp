@@ -39,3 +39,15 @@ FragTrap::~FragTrap() {
 void FragTrap::highFivesGuys() {
 	std::cout << "high fives " << std::endl;
 }
+
+void FragTrap::attack(const std::string &target) {
+	if (HitPoints && energyPoints)
+	{
+		energyPoints--;
+		std::cout << "FragTrap " << name << " attacks " << target;
+		std::cout << ", causing " <<  attackDamage << " points of damage!";
+		std::cout << std::endl;
+	}
+	else
+		std::cout << "FragTrap has No Energy Point or Hit Point" << std::endl;
+}

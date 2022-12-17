@@ -5,13 +5,13 @@
 int main ()
 {
 	ClapTrap clapTrap("CLAP");
-//	ScavTrap scavTrap("SCAV");
+	ScavTrap scavTrap("SCAV");
 	FragTrap fragTrap("fragTrap");
 
-//	clapTrap.attack ("me");
-//	scavTrap.attack("ael");
-//	clapTrap.beRepaired(1);
-//	clapTrap.takeDamage(3);
-//	scavTrap.takeDamage(1);
-//	scavTrap.guardGate();
+	clapTrap.attack ("me");
+	scavTrap.attack("ael");
+	clapTrap.beRepaired(1);
+	clapTrap.takeDamage(0);
+	scavTrap.takeDamage(0);
+	scavTrap.guardGate();
 }

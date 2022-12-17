@@ -29,14 +29,18 @@ Dog::Dog()
 
 Dog::Dog(Dog &copy) {
     std::cout << "Dog class copy constructor called\n";
-    *this = copy;
+	this->type = copy.type;
+	this->brain = new Brain();
+	*this->brain = *copy.brain;
 }
 
 Dog &Dog::operator=(const Dog &to) {
-    this->type = to.type;
+	delete brain;
+
 	this->brain = new Brain();
+	this->type = to.type;
 	*this->brain = *to.brain;
-    return *this;
+	return *this;
 }
 
 Brain *Dog::getBrain() const {
@@ -44,5 +48,9 @@ Brain *Dog::getBrain() const {
 }
 
 void Dog::setBrain(Brain *b) {
-	Dog::brain = b;
+	if (b == nullptr)
+		return ;
+	delete brain;
+	this->brain = new Brain();
+	*Dog::brain = *b;
 }

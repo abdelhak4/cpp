@@ -6,12 +6,14 @@
 #define CPP_SCAVTRAP_HPP
 #include "ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap{
+class ScavTrap: public ClapTrap {
 public:
 	void	guardGate(void);
 	ScavTrap( void );
 	ScavTrap(std::string name);
 	ScavTrap(const ClapTrap& copy);
+	~ScavTrap();
+	void attack(const std::string &target);
 	ScavTrap& operator=(const ScavTrap& object);
 
 };

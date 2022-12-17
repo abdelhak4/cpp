@@ -13,7 +13,6 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::min( b, a ) << std::endl;
-	return 0;
 //	Fixed a;
 //	std::cout << ++a << std::endl;
 //	std::cout << a++ << std::endl;
@@ -31,6 +30,6 @@ int main( void ) {
 //	std::cout << c - a << std::endl;
 //	std::cout << std::endl;
 //	std::cout << c + a << std::endl;
-//	bool af  = b != a;
-//	std::cout << af << std::endl;
+	Fixed af  = b = a;
+	std::cout << af << std::endl;
 }

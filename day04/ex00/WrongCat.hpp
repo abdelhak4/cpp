@@ -7,9 +7,8 @@
 #include <string>
 #include "WrongAnimal.hpp"
 
-class WrongCat: public WrongAnimal{
-protected:
-    std::string type;
+class WrongCat: public WrongAnimal {
+
 public:
     void    MakeSound() const;
     WrongCat();

@@ -14,6 +14,7 @@ public:
 	FragTrap(const FragTrap& copy);
 	FragTrap& operator=(const FragTrap& object);
 	~FragTrap();
+	void attack(const std::string &target);
 	void	highFivesGuys();
 };
 

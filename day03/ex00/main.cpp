@@ -7,5 +7,5 @@ int main ()
 
 	clapTrap.attack("me");
 	clapTrap.beRepaired(1);
-	clapTrap.takeDamage(3);
+	clapTrap.takeDamage(0);
 }

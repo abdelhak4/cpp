@@ -25,17 +25,17 @@ Fixed::Fixed(const float val)
 	fx_value = roundf(val * (static_cast<float>((1<<fb))));
 }
 
-Fixed::Fixed(const Fixed &t)
+Fixed::Fixed(const Fixed& t)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = t;
 }
 
-Fixed &Fixed::operator=(const Fixed &t)
+Fixed& Fixed::operator=(const Fixed &t)
 {
 	std::cout << "Copy assignment operator constructor called" << std::endl;
 	this->fx_value = t.getRawBits();
-	return *this;
+	return this;
 }
 
 Fixed::~Fixed(void) { std::cout << "Destructor called" << std::endl; }

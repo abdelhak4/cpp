@@ -53,7 +53,7 @@ void ClapTrap::attack(const std::string &target) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
-	if (HitPoints && energyPoints)
+	if (HitPoints)
 	{
 		std::cout << "ClapTrap has taken a damage" << std::endl;
 		attackDamage += amount;
