@@ -6,6 +6,7 @@
 #define EX00_FORM_HPP
 #include <string>
 #include <exception>
+#include <ostream>
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
@@ -21,10 +22,8 @@ private:
 	const std::string	_name;
 	bool				_is_signed;
 	const short			_gradeToSign;
-
 	const short			_gradeToExecute;
 public:
-	///constructors
 	Form(const std::string &name, short gradeToSign, short gradeToExecute);
 	Form();
 	Form(const Form& copy);
@@ -32,11 +31,13 @@ public:
 	~Form();
 	///getters
 	const 	std::string &getName() const;
-	bool 	isIsSigned() const;
+	bool 	isSigned() const;
 	short 	getGradeToSign() const;
 	short 	getGradeToExecute() const;
 	void	beSigned(Bureaucrat& bureaucrat);
 };
+
+std::ostream &operator<<(std::ostream &os, const Form &form);
 
 
 #endif //EX00_FORM_HPP

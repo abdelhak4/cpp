@@ -1,4 +1,4 @@
-NAME = animal
+NAME = exception
 SRCS = main.cpp Bureaucrat.cpp Form.cpp
 
 CFLAGS = -Wall -Werror -Wextra
@@ -13,4 +13,4 @@ fclean :
 	rm -f $(NAME)
 
 re : fclean all
-.PHONY: clean all clean re fclean
+.PHONY: clean a ll clean re fclean

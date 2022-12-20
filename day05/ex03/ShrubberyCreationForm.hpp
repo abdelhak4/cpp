@@ -11,7 +11,7 @@
 class ShrubberyCreationForm : public Form {
 	public:
 		ShrubberyCreationForm( void );
-		 ShrubberyCreationForm( const std::string& name, short	&gradeToSign, short &GradeToExecute);
+		 ShrubberyCreationForm( const std::string& name);
 		ShrubberyCreationForm(const ShrubberyCreationForm& copy);
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& object);
 		~ShrubberyCreationForm();

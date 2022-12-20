@@ -18,7 +18,7 @@ const std::string &Form::getName() const {
 	return _name;
 }
 
-bool Form::isIsSigned() const {
+bool Form::isSigned() const {
 	return _is_signed;
 }
 
@@ -31,16 +31,14 @@ short Form::getGradeToExecute() const {
 }
 
 Form::Form(
-		const std::string &name,
-		short gradeToSign,
-		short gradeToExecute
+		const std::string &name, short gradeToSign, short gradeToExecute
 		) : _name(name),
 			_gradeToSign(gradeToSign),
 			_gradeToExecute(gradeToExecute) {
 	std::cout << "Form Parametrized constructor" << std::endl;
 	if (gradeToExecute < 1 || gradeToSign < 1)
 		throw Form::GradeTooHighException();
-	else
+	else if (gradeToSign > 150 || gradeToExecute > 150)
 		throw Form::GradeTooLowException();
 }
 
@@ -68,5 +66,13 @@ void Form::beSigned(Bureaucrat &bureaucrat) {
 
 Form::~Form() {
 	std::cout << "Form destructor called" << std::endl;
+}
+
+std::ostream & operator<<(std::ostream &os, const Form &form) {
+	os << "_name: " << form.getName() << " is_signed: "
+	   << form.isSigned() << " gradeToSign: "
+	   << form.getGradeToSign() << " gradeToExecute: "
+	   << form.getGradeToExecute();
+	return os;
 }
 

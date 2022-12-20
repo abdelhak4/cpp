@@ -69,7 +69,7 @@ std::ostream&	operator<<(std::ostream& os, const Bureaucrat& o) {
 }
 
 void Bureaucrat::signFrom(const Form& form) {
-	if (form.isIsSigned())
+	if (form.isSigned())
 		std::cout << this->_name << "signed" << form.getName();
 	else
 	{

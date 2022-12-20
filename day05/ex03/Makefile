@@ -1,5 +1,7 @@
 NAME = exception
-SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
+	PresidentialPardonForm.cpp RobotomyRequestForm.cpp\
+	Intern.cpp
 
 CFLAGS = -Wall -Werror -Wextra
 

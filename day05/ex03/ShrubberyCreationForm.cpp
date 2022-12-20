@@ -10,8 +10,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(void) {
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(
-		const std::string& name, short&	gradeToSign, short& GradeToExecute
-	) : Form(name, gradeToSign, GradeToExecute) {
+		const std::string& name) : Form(name, 145, 137) {
 	std::cout << "ShrubberyCreationForm parametrized constructor" << std::endl;
 }
 

@@ -2,12 +2,11 @@
 
 #ifndef EX02_BUREAUCRAT_HPP
 #define EX02_BUREAUCRAT_HPP
+#include "Form.hpp"
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
 #include <string>
-#include "Form.hpp"
-
 class Form;
 class Bureaucrat  {
 	class GradeTooHighException :public std::exception {
